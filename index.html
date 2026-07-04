@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kk蛋糕店预约</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">kk蛋糕店</a>
+      <nav aria-label="主要导航">
+        <a href="#booking">预约</a>
+        <a href="#about">简介</a>
+        <a href="#location">位置</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">手工蛋糕体验预约</p>
+          <h1>和蛋糕师一起，做一枚只属于你的甜点。</h1>
+          <p class="lead">
+            kk蛋糕店提供小班制手工蛋糕体验，从胚体修整、奶油抹面到裱花装饰，
+            都有蛋糕师现场指导。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#booking">立即预约</a>
+            <a class="secondary-button" href="#gallery">查看环境</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="./assets/cake-class.png" alt="蛋糕师指导学员制作手工蛋糕" />
+        </figure>
+      </section>
+
+      <section class="booking-section" id="booking">
+        <div class="section-heading">
+          <p class="eyebrow">Reservation</p>
+          <h2>预约制作时间</h2>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-grid">
+            <label>
+              登录手机号
+              <input type="tel" name="loginPhone" placeholder="用于登录预约" required />
+            </label>
+            <label>
+              联系人姓名
+              <input type="text" name="name" placeholder="请输入姓名" required />
+            </label>
+            <label>
+              联系人电话
+              <input type="tel" name="phone" placeholder="请输入联系电话" required />
+            </label>
+            <label>
+              预约日期
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              预约时间
+              <select name="time" required>
+                <option value="">请选择时间</option>
+                <option>10:00 - 12:00</option>
+                <option>13:30 - 15:30</option>
+                <option>16:00 - 18:00</option>
+                <option>19:00 - 21:00</option>
+              </select>
+            </label>
+            <label>
+              体验人数
+              <select name="guests" required>
+                <option value="">请选择人数</option>
+                <option>1人</option>
+                <option>2人</option>
+                <option>3人</option>
+                <option>4人</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            备注
+            <textarea name="note" rows="4" placeholder="可填写口味偏好、生日主题或其他需求"></textarea>
+          </label>
+          <button class="primary-button submit-button" type="submit">提交预约</button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </form>
+      </section>
+
+      <section class="about-section" id="about">
+        <div>
+          <p class="eyebrow">About kk</p>
+          <h2>一间适合慢慢创作的手工蛋糕店</h2>
+        </div>
+        <p>
+          kk蛋糕店主打预约制手作体验，店内准备了蛋糕胚、奶油、裱花工具和装饰材料。
+          你可以带朋友、家人或同事一起完成蛋糕作品，也可以为生日、纪念日和节日定制主题。
+        </p>
+      </section>
+
+      <section class="gallery-section" id="gallery" aria-label="店铺照片">
+        <article>
+          <img src="./assets/storefront.png" alt="kk蛋糕店门店外观" />
+          <div>
+            <h3>门店外观</h3>
+            <p>明亮橱窗与温暖木质入口，适合预约到店体验。</p>
+          </div>
+        </article>
+        <article>
+          <img src="./assets/interior.png" alt="kk蛋糕店店内环境" />
+          <div>
+            <h3>店内环境</h3>
+            <p>开放式手作桌、展示柜和烘焙工具区，让制作过程更轻松。</p>
+          </div>
+        </article>
+        <article>
+          <img src="./assets/cake-class.png" alt="蛋糕师教导学员制作蛋糕" />
+          <div>
+            <h3>蛋糕师指导</h3>
+            <p>从抹面到裱花都有现场指导，新手也能完成漂亮作品。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="location-section" id="location">
+        <div>
+          <p class="eyebrow">Location</p>
+          <h2>店铺位置</h2>
+          <p>上海市徐汇区甜品街 18 号 1 层</p>
+          <p>营业时间：周二至周日 10:00 - 21:00</p>
+        </div>
+        <div class="map-card" aria-label="店铺位置示意">
+          <span>kk蛋糕店</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>kk蛋糕店 · 手工蛋糕预约体验</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
