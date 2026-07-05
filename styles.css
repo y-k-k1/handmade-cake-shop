@@ -240,6 +240,21 @@ textarea {
   resize: vertical;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #9a8f88;
+  opacity: 1;
+}
+
+input[type="date"]:invalid,
+select:invalid {
+  color: #9a8f88;
+}
+
+select option {
+  color: var(--ink);
+}
+
 input:focus,
 select:focus,
 textarea:focus {

@@ -45,24 +45,24 @@
           <div class="form-grid">
             <label>
               登录手机号
-              <input type="tel" name="loginPhone" placeholder="用于登录预约" required />
+              <input type="tel" name="loginPhone" placeholder="示例：138 0000 0000" required />
             </label>
             <label>
               联系人姓名
-              <input type="text" name="name" placeholder="请输入姓名" required />
+              <input type="text" name="name" placeholder="示例：张三" required />
             </label>
             <label>
               联系人电话
-              <input type="tel" name="phone" placeholder="请输入联系电话" required />
+              <input type="tel" name="phone" placeholder="示例：138 0000 0000" required />
             </label>
             <label>
               预约日期
-              <input type="date" name="date" required />
+              <input type="date" name="date" placeholder="示例：2026-07-18" required />
             </label>
             <label>
               预约时间
               <select name="time" required>
-                <option value="">请选择时间</option>
+                <option value="">示例：13:30 - 15:30</option>
                 <option>10:00 - 12:00</option>
                 <option>13:30 - 15:30</option>
                 <option>16:00 - 18:00</option>
@@ -72,7 +72,7 @@
             <label>
               体验人数
               <select name="guests" required>
-                <option value="">请选择人数</option>
+                <option value="">示例：2人</option>
                 <option>1人</option>
                 <option>2人</option>
                 <option>3人</option>
@@ -82,7 +82,7 @@
           </div>
           <label>
             备注
-            <textarea name="note" rows="4" placeholder="可填写口味偏好、生日主题或其他需求"></textarea>
+            <textarea name="note" rows="4" placeholder="示例：草莓奶油蛋糕，生日主题，少糖"></textarea>
           </label>
           <button class="primary-button submit-button" type="submit">提交预约</button>
           <p class="form-message" id="formMessage" role="status"></p>
