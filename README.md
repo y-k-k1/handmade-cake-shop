@@ -11,9 +11,9 @@
 ```text
 .
 ├── assets/
-│   ├── cake-class.png
-│   ├── interior.png
-│   └── storefront.png
+│   ├── cake-class.jpg
+│   ├── interior.jpg
+│   └── storefront.jpg
 ├── index.html
 ├── script.js
 ├── styles.css
