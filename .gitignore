@@ -34,3 +34,8 @@ desktop.ini
 tmp/
 temp/
 *.tmp
+
+# Local downloads/installers
+*.exe
+*.msi
+*.zip
