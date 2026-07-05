@@ -300,6 +300,8 @@ textarea:focus {
 }
 
 .location-section {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(24px, 5vw, 60px);
@@ -307,7 +309,54 @@ textarea:focus {
   padding-bottom: 84px;
 }
 
+.location-section::before,
+.location-section::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+.location-section::before {
+  left: clamp(150px, 22vw, 280px);
+  bottom: 86px;
+  width: 54px;
+  height: 42px;
+  background:
+    radial-gradient(circle at 18px 11px, #fff 0 10px, transparent 11px),
+    radial-gradient(circle at 32px 9px, #fff 0 12px, transparent 13px),
+    radial-gradient(circle at 42px 14px, #fff 0 9px, transparent 10px),
+    linear-gradient(#f0ad82 0 0) 13px 17px / 31px 20px no-repeat;
+  border-bottom: 9px solid #d98258;
+  border-radius: 18px 18px 8px 8px;
+  box-shadow: 0 12px 26px rgba(185, 79, 104, 0.14);
+  transform: rotate(-8deg);
+}
+
+.location-section::after {
+  right: clamp(18px, 4vw, 52px);
+  top: 14px;
+  width: 74px;
+  height: 74px;
+  background:
+    radial-gradient(circle at 22px 24px, #f6c7d1 0 7px, transparent 8px),
+    radial-gradient(circle at 52px 20px, #f3d99f 0 6px, transparent 7px),
+    radial-gradient(circle at 37px 50px, #9eaf82 0 8px, transparent 9px);
+  opacity: 0.86;
+}
+
+.location-section h2 {
+  font-family: "YouYuan", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  font-weight: 800;
+}
+
+.location-section p {
+  font-family: "YouYuan", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  font-size: 18px;
+}
+
 .map-card {
+  position: relative;
   min-height: 260px;
   display: grid;
   place-items: center;
@@ -320,6 +369,38 @@ textarea:focus {
   box-shadow: var(--shadow);
 }
 
+.map-card::before,
+.map-card::after {
+  position: absolute;
+  content: "";
+}
+
+.map-card::before {
+  left: 28px;
+  top: 28px;
+  width: 72px;
+  height: 72px;
+  background:
+    radial-gradient(circle at 50% 42%, #fffaf7 0 22px, transparent 23px),
+    radial-gradient(circle at 50% 54%, #f0ad82 0 32px, transparent 33px);
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.map-card::after {
+  right: 34px;
+  bottom: 30px;
+  width: 88px;
+  height: 30px;
+  background:
+    radial-gradient(circle at 16px 15px, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 36px 15px, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 56px 15px, #fff 0 5px, transparent 6px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.68), rgba(255, 250, 247, 0.28));
+  border-radius: 999px;
+  opacity: 0.82;
+}
+
 .map-card span {
   display: inline-flex;
   align-items: center;
@@ -330,6 +411,7 @@ textarea:focus {
   color: var(--ink);
   background: #fff;
   border-radius: 999px;
+  font-family: "YouYuan", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
   font-weight: 700;
 }
 
@@ -339,6 +421,8 @@ footer {
   color: var(--muted);
   background: #fff;
   border-top: 1px solid var(--line);
+  font-family: "YouYuan", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  font-size: 17px;
 }
 
 footer p {
